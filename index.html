@@ -1,165 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secure Rental Background Check</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<title>Background Check | Online Screening</title>
+
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
 body{
-  background:#f5f7fb;
-  color:#111827;
+    background:#f1f5f9;
+    color:#172033;
 }
 
 .container{
-  max-width:480px;
-  margin:auto;
-  padding:20px;
+    max-width:500px;
+    margin:auto;
+    padding:20px;
 }
 
-.hero{
-  text-align:center;
-  padding:40px 20px 20px 20px;
+/* HEADER */
+
+.header{
+    text-align:center;
+    padding:30px 10px 18px;
 }
 
-.hero h1{
-  font-size:26px;
-  font-weight:700;
-  margin-bottom:10px;
+.header h1{
+    font-size:30px;
+    line-height:1.2;
+    margin-bottom:10px;
 }
 
-.hero p{
-  font-size:15px;
-  color:#6b7280;
-  line-height:1.6;
+.header p{
+    color:#64748b;
+    font-size:15px;
+    line-height:1.5;
 }
 
-.card{
-  background:#ffffff;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-  margin-top:25px;
+/* MAIN PANEL */
+
+.panel{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:24px;
+    margin-top:10px;
+    box-shadow:0 6px 20px rgba(15,23,42,.05);
 }
 
-.price{
-  font-size:28px;
-  font-weight:700;
-  text-align:center;
-  margin-bottom:5px;
+.panel-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
 }
 
-.refund{
-  text-align:center;
-  font-size:13px;
-  color:#6b7280;
-  margin-bottom:20px;
+.panel-title{
+    font-size:19px;
+    font-weight:bold;
 }
 
-.features{
-  list-style:none;
-  margin-bottom:25px;
+.status{
+    font-size:12px;
+    font-weight:bold;
+    color:#15803d;
+    background:#dcfce7;
+    padding:6px 10px;
+    border-radius:20px;
 }
 
-.features li{
-  margin-bottom:12px;
-  font-size:14px;
-  display:flex;
-  align-items:center;
+/* CHECK ITEMS */
+
+.check-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:15px 0;
+    border-bottom:1px solid #eef2f7;
 }
 
-.features li span{
-  background:#e0f2fe;
-  color:#0284c7;
-  border-radius:50%;
-  width:22px;
-  height:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-  margin-right:10px;
+.check-item:last-of-type{
+    border-bottom:0;
 }
+
+.check-icon{
+    width:42px;
+    height:42px;
+    min-width:42px;
+    border-radius:12px;
+    background:#f8fafc;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:19px;
+}
+
+.check-text{
+    flex:1;
+}
+
+.check-text strong{
+    display:block;
+    font-size:15px;
+    margin-bottom:3px;
+}
+
+.check-text span{
+    color:#64748b;
+    font-size:13px;
+    line-height:1.4;
+}
+
+/* CTA */
 
 .cta{
-  display:block;
-  width:100%;
-  padding:14px;
-  background:#111827;
-  color:#ffffff;
-  text-align:center;
-  border-radius:12px;
-  font-weight:600;
-  text-decoration:none;
-  font-size:15px;
-  transition:0.3s;
+    margin-top:22px;
 }
 
-.cta:hover{
-  background:#1f2937;
+.button{
+    display:block;
+    width:100%;
+    background:#0f766e;
+    color:#fff;
+    text-decoration:none;
+    text-align:center;
+    padding:16px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
 }
 
-.secure{
-  text-align:center;
-  font-size:12px;
-  color:#9ca3af;
-  margin-top:15px;
+.button:hover{
+    background:#115e59;
 }
+
+.note{
+    text-align:center;
+    color:#64748b;
+    font-size:11px;
+    margin-top:10px;
+    line-height:1.5;
+}
+
+/* HOW IT WORKS */
+
+.info{
+    margin-top:28px;
+}
+
+.info h2{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.info-box{
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:13px;
+    padding:16px;
+    margin-bottom:10px;
+}
+
+.info-box strong{
+    display:block;
+    font-size:14px;
+    margin-bottom:4px;
+}
+
+.info-box p{
+    color:#64748b;
+    font-size:13px;
+    line-height:1.5;
+}
+
+/* FOOTER */
 
 .footer{
-  text-align:center;
-  font-size:12px;
-  color:#9ca3af;
-  margin-top:40px;
-  padding-bottom:30px;
+    text-align:center;
+    color:#94a3b8;
+    font-size:11px;
+    line-height:1.5;
+    padding:28px 10px 20px;
 }
 
-@media(min-width:768px){
-  .container{
-    max-width:520px;
-  }
+/* MOBILE */
+
+@media(max-width:380px){
+
+    .container{
+        padding:15px;
+    }
+
+    .header{
+        padding-top:25px;
+    }
+
+    .header h1{
+        font-size:27px;
+    }
+
+    .panel{
+        padding:20px;
+    }
+
 }
+
 </style>
+
 </head>
+
+
 <body>
+
 
 <div class="container">
 
-  <div class="hero">
-    <h1>Rental Background Check</h1>
-    <p>Complete your background check to schedule your tour. Fast, safe, and verified.</p>
-  </div>
 
-  <div class="card">
-    <div class="price">Fee is Refundable</div>
-    <div class="refund">Refundable on tour day or adjusted with move-in cost</div>
+<header class="header">
 
-    <ul class="features">
-      <li><span>✓</span>Soft Background Check (Soft reports only)</li>
-      <li><span>✓</span>Nationwide Criminal Background Scan (1 Year)</li>
-      <li><span>✓</span>Identity Verification</li>
-      <li><span>✓</span>Instant Confirmation</li>
-    </ul>
+    <h1>
+        Check Your Background
+    </h1>
 
-    <a href="https://afflat3a1.com/trk/lnk/6AF2295B-C1D1-4A8B-B001-2226E3363DB2/?o=32811&c=918277&a=568801&k=C5C7B9D1DBF434AC9F0B8B946F3931CB&l=38659&s1=AR_HarryPotter" class="cta">Start Backgrond Check</a>
+    <p>
+        Review available screening information through a simple online process.
+    </p>
 
-    <div class="secure">
-      🔒 256-bit SSL Encrypted • Secure & Confidential
+</header>
+
+
+
+<section class="panel">
+
+
+    <div class="panel-top">
+
+        <div class="panel-title">
+            Screening Overview
+        </div>
+
+        <div class="status">
+            Secure
+        </div>
+
     </div>
-  </div>
 
-  <div class="footer">
-    © 2026 Rental Screening Services. All rights reserved.
-  </div>
+
+
+    <div class="check-item">
+
+        <div class="check-icon">
+            👤
+        </div>
+
+        <div class="check-text">
+
+            <strong>
+                Identity Information
+            </strong>
+
+            <span>
+                Verify your information as part of the screening process.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="check-item">
+
+        <div class="check-icon">
+            📄
+        </div>
+
+        <div class="check-text">
+
+            <strong>
+                Background Information
+            </strong>
+
+            <span>
+                Review available information included in your screening.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="check-item">
+
+        <div class="check-icon">
+            💳
+        </div>
+
+        <div class="check-text">
+
+            <strong>
+                Credit Information
+            </strong>
+
+            <span>
+                Review available credit-related information.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="check-item">
+
+        <div class="check-icon">
+            🔒
+        </div>
+
+        <div class="check-text">
+
+            <strong>
+                Secure Online Check
+            </strong>
+
+            <span>
+                Complete your screening through the secure offer page.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="cta">
+
+        <a
+            class="button"
+            href="https://whitebridge.ai/deals?oid=1&affid=179&sub1=SB=Hunter"
+        >
+            Start Background Check
+        </a>
+
+        <div class="note">
+            Continue to the secure offer page to complete your screening.
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<section class="info">
+
+    <h2>
+        How It Works
+    </h2>
+
+
+    <div class="info-box">
+
+        <strong>
+            1. Start Your Check
+        </strong>
+
+        <p>
+            Select the button above to begin the online screening process.
+        </p>
+
+    </div>
+
+
+
+    <div class="info-box">
+
+        <strong>
+            2. Complete Verification
+        </strong>
+
+        <p>
+            Follow the instructions and provide the required information.
+        </p>
+
+    </div>
+
+
+
+    <div class="info-box">
+
+        <strong>
+            3. Review Available Results
+        </strong>
+
+        <p>
+            Review the information made available through the screening service.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<footer class="footer">
+
+    © 2026 Background Check Services
+
+</footer>
+
 
 </div>
+
 
 </body>
 </html>
